@@ -56,10 +56,10 @@
     <div class="item">
         <div class="meta">
             <div class="upper-row">
-                <h3 class="job-title">{{ position.title|e }}</h3>
-                <div class="time">{{ position.period|e }}</div>
+                <h3 class="job-title">{{ position.title }}</h3>
+                <div class="time">{{ position.period }}</div>
             </div><!--//upper-row-->
-            <div class="company">{{ position.company|e }}</div>
+            <div class="company">{{ position.company|upper }}</div>
         </div><!--//meta-->
         <div class="details">
             {% if position.details is iterable %}
@@ -82,7 +82,7 @@
 
     {% for skill in skills %}
     <div class="item">
-        <span class="project-title"><a href="#hook">{{ skill.type }}</a></span><br>
+        <span class="project-title"><a href="#hook">{{ skill.type|upper }}</a></span><br>
         <span class="project-tagline">{{ skill.keywords }}</span>
     </div><!--//item-->
     {% endfor %}

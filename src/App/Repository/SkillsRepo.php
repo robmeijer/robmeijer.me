@@ -6,42 +6,47 @@ class SkillsRepo
 {
     protected $skills = [
         [
-            'type' => 'TECHNOLOGIES',
+            'type' => 'Technologies',
             'keywords' => 'LAMP, XML, JSON, Redis, Beanstalkd, Supervisord, Google Analytics, APIs',
         ],
         [
-            'type' => 'LANGUAGES',
+            'type' => 'Languages',
             'keywords' => 'PHP, SQL, HTML, CSS, JavaScript',
         ],
         [
-            'type' => 'FRAMEWORKS / LIBRARIES',
+            'type' => 'Frameworks / Libraries',
             'keywords' => 'Zend1, Zend2, Expressive, Laravel, Lumen, Symfony2, Silex, CodeIgniter, JQuery,
                 Bootstrap CSS',
         ],
         [
-            'type' => 'STANDARDS',
+            'type' => 'Standards',
             'keywords' => 'MVC, OOP, PSRx, HTTP, REST, AJAX, DocBlocks',
         ],
         [
-            'type' => 'IDE / TOOLS',
+            'type' => 'IDEs / Tools',
             'keywords' => 'NetBeans, PHPStorm, Sublime Text, MySQL Workbench, Sequel Pro, SourceTree, VirtualBox,
                 Firebug, Trac, Vagrant, Composer, Atlassian Suite (Jira, Bitbucket, Bamboo, Confluence)',
         ],
         [
-            'type' => 'DATABASE',
+            'type' => 'Databases',
             'keywords' => 'MySQL5, Sqlite, MongoDB',
         ],
         [
-            'type' => 'WEB SERVERS',
+            'type' => 'Web Servers',
             'keywords' => 'Apache',
         ],
         [
-            'type' => 'VERSION CONTROL',
+            'type' => 'Version Control',
             'keywords' => 'Git, SVN, Mercurial',
         ],
         [
-            'type' => 'OPERATING SYSTEMS',
+            'type' => 'Operating Systems',
             'keywords' => 'Ubuntu Linux, Windows, Apple OS X',
+        ],
+        [
+            'type' => 'Additional Skills',
+            'keywords' => 'E-commerce, SEO, Scrum, Agile methodologies, Code reviews, Documentation,
+                SOLID design principles',
         ],
     ];
 

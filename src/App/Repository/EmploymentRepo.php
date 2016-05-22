@@ -6,9 +6,9 @@ class EmploymentRepo
 {
     protected $positions = [
         [
-            'title' => 'Support Team Leader / Scrum Master',
+            'title' => 'Support / Development Team Leader',
             'period' => 'January 2016 - Present',
-            'company' => 'INTERACTIVE INVESTOR',
+            'company' => 'Interactive Investor',
             'details' => 'Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
                 nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
@@ -20,7 +20,7 @@ class EmploymentRepo
         [
             'title' => 'Senior Developer',
             'period' => 'December 2014 - Present',
-            'company' => 'INTERACTIVE INVESTOR',
+            'company' => 'Interactive Investor',
             'details' => 'Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
                 nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
@@ -28,7 +28,7 @@ class EmploymentRepo
         [
             'title' => 'Support Team Leader',
             'period' => 'February 2014 - November 2014',
-            'company' => 'WORLDSTORES LTD',
+            'company' => 'WorldStores Ltd',
             'details' => [
                 'Perform maintenance development, and fix reported bugs',
                 'Provide out of hours 2nd line support for any website issues',
@@ -39,7 +39,7 @@ class EmploymentRepo
         [
             'title' => 'Senior Developer',
             'period' => 'August 2009 - November 2014',
-            'company' => 'WORLDSTORES LTD',
+            'company' => 'WorldStores Ltd',
             'details' => [
                 'Planning and development of CMS and E-commerce platform supporting 70+ sites',
                 'Weekly workshops on various topics to improve knowledge base and coding standards',
@@ -50,7 +50,7 @@ class EmploymentRepo
         [
             'title' => 'Web Developer',
             'period' => 'April 2009 - July 2009',
-            'company' => 'ORAGON LTD',
+            'company' => 'Oragon Ltd',
             'details' => [
                 'Development and maintenance of customer sites',
             ],
@@ -58,7 +58,7 @@ class EmploymentRepo
         [
             'title' => 'Technical Consultant',
             'period' => 'August 2004 - April 2009',
-            'company' => 'SWIFTPRO LTD',
+            'company' => 'Swiftpro Ltd',
             'details' => [
                 'Development and maintenance of help-desk system',
                 'Customer technical support, telephonic and on-site training, network and desktop administration',
@@ -67,7 +67,7 @@ class EmploymentRepo
         [
             'title' => 'Technical Consultant',
             'period' => 'December 1997 - May 2004',
-            'company' => 'THE NATIONAL HORSE RACING AUTHORITY',
+            'company' => 'The National Horse Racing Authority',
             'details' => [
                 'Development and maintenance of company website',
                 'Windows desktop support & network administration',

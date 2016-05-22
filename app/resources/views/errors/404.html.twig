@@ -1,0 +1,27 @@
+{% extends "layouts/app.html.twig" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block sidebar %}
+    <div class="profile-container">
+        <img class="profile" src="assets/images/profile.png" alt="" />
+        <h1 class="name">Rob Meijer</h1>
+        <h3 class="tagline">Software Developer</h3>
+    </div><!--//profile-container-->
+    <div class="contact-container container-block">
+        <ul class="list-unstyled contact-list">
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: email@robmeijer.co.uk">email@robmeijer.co.uk</a></li>
+            <li class="github"><i class="fa fa-github"></i><a href="#" target="_blank">github.com/robmeijer</a></li>
+            <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/robmeijeruk" target="_blank">@robmeijeruk</a></li>
+        </ul>
+    </div><!--//contact-container-->
+{% endblock %}
+
+{% block main %}
+    <section class="section summary-section">
+        <h2 class="section-title"><i class="fa fa-user"></i>Page Not Found</h2>
+        <div class="summary">
+            <p>Summarise your career here lorem ipsum dolor sit amet, consectetuer adipiscing elit. You can <a href="http://themes.3rdwavemedia.com/website-templates/orbit-free-resume-cv-template-for-developers/" target="_blank">download this free resume/CV template here</a>. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.</p>
+        </div><!--//summary-->
+    </section><!--//section-->
+{% endblock %}

@@ -1,36 +1,17 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-	"require": {
-		"laravel/framework": "4.1.*"
-	},
-	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-update-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-create-project-cmd": [
-			"php artisan key:generate"
-		]
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "stable"
+    "name": "robm/robmeijer_me",
+    "description": "Robmeijer.me",
+    "keywords": ["php", "homepage"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "silex/silex": "~2.0",
+        "twig/twig": "^1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "" : "src/"
+        }
+    },
+    "minimum-stability": "stable"
 }

@@ -9,21 +9,23 @@ class EmploymentRepo
             'title' => 'Support / Development Team Leader',
             'period' => 'January 2016 - Present',
             'company' => 'Interactive Investor',
-            'details' => 'Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                consequat massa quis enim. Donec pede justo.
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
-                sunt explicabo.',
+            'details' => [
+                'Ownership of the Trading team delivery, ensuring timely delivery of projects',
+                'Scoping projects and breaking them down into tasks and estimates',
+                'Initial escalation point for incidents and bugs',
+                'Assist across business projects with technical discussions',
+            ],
         ],
         [
             'title' => 'Senior Developer',
             'period' => 'December 2014 - Present',
             'company' => 'Interactive Investor',
-            'details' => 'Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
+            'details' => [
+                'Ongoing planning and development of Trading platform',
+                'Hold weekly workshops on various topics to improve knowledge base and coding standards',
+                'Research and introduce new technologies and best practices that may benefit the company',
+                'Perform regular code reviews to ensure coding standards are maintained',
+            ],
         ],
         [
             'title' => 'Support Team Leader',

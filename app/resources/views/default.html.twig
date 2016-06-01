@@ -72,6 +72,26 @@
                 <p>{{ position.details|e }}</p>
             {% endif %}
         </div><!--//details-->
+        {% if position.achievements is not empty %}
+            <div class="details">
+                {% if position.achievements is iterable %}
+                    <hr>
+                    <ul>
+                        {% for achievement in position.achievements %}
+                            <li>{{ achievement|e }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>{{ position.achievements|e }}</p>
+                {% endif %}
+            </div><!--//details-->
+        {% endif %}
+        {% if position.skills is not empty %}
+            <div class="details">
+                <em>Key Skills</em>
+                    <p><em>{{ position.skills|e }}</em></p>
+            </div><!--//details-->
+        {% endif %}
     </div><!--//item-->
     {% endfor %}
 

@@ -13,19 +13,31 @@ class EmploymentRepo
                 'Ownership of the Trading team delivery, ensuring timely delivery of projects',
                 'Scoping projects and breaking them down into tasks and estimates',
                 'Initial escalation point for incidents and bugs',
-                'Assist across business projects with technical discussions',
+                'Assisting across business projects with technical discussions',
+                'Managing the release process, ensuring progress of completed tasks through development, to UAT, and
+                release',
             ],
+            'achievements' => [
+                'Introduced a number of automations that made the Contact Centre less reliant on IT and more
+                self-sufficient',
+            ],
+            'skills' => 'Atlassian Suite (Jira, Bitbucket, Bamboo, Confluence), Agile, Scrum',
         ],
         [
             'title' => 'Senior Developer',
             'period' => 'December 2014 - Present',
             'company' => 'Interactive Investor',
             'details' => [
-                'Ongoing planning and development of Trading platform',
-                'Hold weekly workshops on various topics to improve knowledge base and coding standards',
-                'Research and introduce new technologies and best practices that may benefit the company',
-                'Perform regular code reviews to ensure coding standards are maintained',
+                'Ongoing planning and development of Trading platform based on Zend1',
+                'Planning and development of various micro-services based on Zend2 and Zend Expressive',
+                'Performing code reviews as part of development process to ensure coding standards are maintained',
             ],
+            'achievements' => [
+                'Spearheaded an overhaul of PHPUnit test suite to separate tests out into unit, functional, and
+                integration tests',
+            ],
+            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows, OOP, MVC, Zend1, Zend2, Zend Expressive, Silex, JQuery, Bootstrap CSS, Redis,
+            REST, Git, Composer',
         ],
         [
             'title' => 'Support Team Leader',
@@ -36,6 +48,10 @@ class EmploymentRepo
                 'Provide out of hours 2nd line support for any website issues',
                 'Mentor new developers to familiarise them with the codebase and company processes',
                 'Generate weekly reports to review support velocity and outstanding tickets',
+            ],
+            'achievements' => [
+                'Reduced overall number of open support tickets by 65% within 6 months. 85% of tickets opened are closed
+                within the same week, and all critical tickets are closed within a few hours at most'
             ],
         ],
         [
@@ -48,6 +64,18 @@ class EmploymentRepo
                 'Research new technologies and best practices that will benefit the company',
                 'Regular code reviews to ensure coding standards are maintained',
             ],
+            'achievements' => [
+                'Developed CSV driven data import system to handle bulk creation of new records, and to import, resize,
+                and distribute product images',
+                'Started holding weekly workshops that cover a range of technical topics to improve the developer
+                knowledge base, and raise code quality and coding standards',
+                'Introduced Redis caching and the Beanstalk queuing service to assist with the planning and development
+                of a centralised CMS responsible for distributing data changes of products to all sites',
+                'Implemented Markdown driven centralised documentation system to allow IT and business to document
+                common processes. This was eventually migrated to Evernote',
+            ],
+            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows+OS X, OOP, MVC, Symfony2, JQuery, Bootstrap CSS, Redis,
+            Beanstalkd, REST, Git, SVN, Composer',
         ],
         [
             'title' => 'Web Developer',
@@ -56,6 +84,7 @@ class EmploymentRepo
             'details' => [
                 'Development and maintenance of customer sites',
             ],
+            'skills' => 'PHP, MySQL, HTML+CSS+JS, Linux+Windows, PhotoShop',
         ],
         [
             'title' => 'Technical Consultant',
@@ -65,6 +94,7 @@ class EmploymentRepo
                 'Development and maintenance of help-desk system',
                 'Customer technical support, telephonic and on-site training, network and desktop administration',
             ],
+            'skills' => 'PHP, MySQL, HTML+CSS, Linux+Windows',
         ],
         [
             'title' => 'Technical Consultant',
@@ -74,6 +104,7 @@ class EmploymentRepo
                 'Development and maintenance of company website',
                 'Windows desktop support & network administration',
             ],
+            'skills' => 'PHP, MySQL, HTML+CSS, Linux+Windows',
         ],
     ];
 

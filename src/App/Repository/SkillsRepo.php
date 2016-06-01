@@ -15,12 +15,12 @@ class SkillsRepo
         ],
         [
             'type' => 'Frameworks / Libraries',
-            'keywords' => 'Zend1, Zend2, Expressive, Laravel, Lumen, Symfony2, Silex, CodeIgniter, JQuery,
+            'keywords' => 'Zend1, Zend2, Expressive, PHPUnit, Laravel, Lumen, Symfony2, Silex, CodeIgniter, JQuery,
                 Bootstrap CSS',
         ],
         [
             'type' => 'Standards',
-            'keywords' => 'MVC, OOP, PSRx, HTTP, REST, AJAX, DocBlocks',
+            'keywords' => 'MVC, SOA, OOP, PSR-x, HTTP, REST, AJAX, DocBlocks, GitFlow',
         ],
         [
             'type' => 'IDEs / Tools',
@@ -46,7 +46,7 @@ class SkillsRepo
         [
             'type' => 'Additional Skills',
             'keywords' => 'E-commerce, SEO, Scrum, Agile methodologies, Code reviews, Documentation,
-                SOLID design principles',
+                SOLID design principles, Unit testing',
         ],
     ];
 

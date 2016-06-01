@@ -36,8 +36,8 @@ class EmploymentRepo
                 'Spearheaded an overhaul of PHPUnit test suite to separate tests out into unit, functional, and
                 integration tests',
             ],
-            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows, OOP, MVC, Zend1, Zend2, Zend Expressive, Silex, JQuery, Bootstrap CSS, Redis,
-            REST, Git, Composer',
+            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows, OOP, MVC, Zend1, Zend2, Zend Expressive, PHPUnit,
+                Silex, JQuery, Bootstrap CSS, Redis, REST, Git, Composer',
         ],
         [
             'title' => 'Support Team Leader',

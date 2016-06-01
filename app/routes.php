@@ -5,8 +5,7 @@ use App\Controller\DefaultController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-$app->get('/', ComingController::class)->bind('coming');
-$app->get('home', DefaultController::class)->bind('home');
+$app->get('/', DefaultController::class)->bind('home');
 
 $app->error(function(\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {

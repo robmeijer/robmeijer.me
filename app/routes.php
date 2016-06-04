@@ -1,13 +1,12 @@
 <?php
 
-use App\Controller\ComingController;
 use App\Controller\DefaultController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 $app->get('/', DefaultController::class)->bind('home');
 
-$app->error(function(\Exception $e, Request $request, $code) use ($app) {
+$app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;
     }

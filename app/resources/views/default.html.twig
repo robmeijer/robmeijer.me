@@ -72,7 +72,7 @@
                 <p>{{ position.details|e }}</p>
             {% endif %}
         </div><!--//details-->
-        {% if position.achievements is not empty %}
+        {% if position.achievements is defined and position.achievements is not empty %}
             <div class="details">
                 {% if position.achievements is iterable %}
                     <hr>
@@ -86,7 +86,7 @@
                 {% endif %}
             </div><!--//details-->
         {% endif %}
-        {% if position.skills is not empty %}
+        {% if position.skills is defined and position.skills is not empty %}
             <div class="details">
                 <em>Key Skills</em>
                     <p><em>{{ position.skills|e }}</em></p>

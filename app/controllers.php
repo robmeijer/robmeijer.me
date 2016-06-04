@@ -5,7 +5,7 @@ use App\Controller\DefaultController;
 use App\Repository\EmploymentRepo;
 use App\Repository\SkillsRepo;
 
-$app[DefaultController::class] = function() use ($app) {
+$app[DefaultController::class] = function () use ($app) {
     return new DefaultController(
         $app,
         $app[EmploymentRepo::class],
@@ -13,6 +13,6 @@ $app[DefaultController::class] = function() use ($app) {
     );
 };
 
-$app[ComingController::class] = function() use ($app) {
+$app[ComingController::class] = function () use ($app) {
     return new ComingController($app);
 };

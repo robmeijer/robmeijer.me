@@ -15,7 +15,7 @@ abstract class Controller
     /**
      * Controller constructor.
      *
-     * @param $app
+     * @param \App $app
      */
     public function __construct(App $app)
     {
@@ -26,7 +26,7 @@ abstract class Controller
      * @param $view
      * @param array $parameters
      * @param Response|null $response
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response;
      */
     public function render($view, array $parameters = [], Response $response = null)
     {

@@ -16,5 +16,10 @@
             "" : "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "" : "tests/"
+        }
+    },
     "minimum-stability": "stable"
 }

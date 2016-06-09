@@ -44,8 +44,24 @@ class DefaultController extends Controller
         return $this->render(
             'default.html.twig',
             [
-                'positions' => $this->employmentRepo->all(),
-                'skills' => $this->skillsRepo->all(),
+                'positions' => $this->getEmploymentRepo()->all(),
+                'skills' => $this->getSkillsRepo()->all(),
             ]);
+    }
+
+    /**
+     * @return EmploymentRepo
+     */
+    public function getEmploymentRepo()
+    {
+        return $this->employmentRepo;
+    }
+
+    /**
+     * @return SkillsRepo
+     */
+    public function getSkillsRepo()
+    {
+        return $this->skillsRepo;
     }
 }

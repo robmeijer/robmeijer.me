@@ -1,0 +1,2 @@
+debug: true
+twig.path: "%root_dir%/resources/views"

@@ -2,8 +2,10 @@
 
 $app = new \App();
 
-require_once __DIR__ . '/../app/services.php';
-require_once __DIR__ . '/../app/controllers.php';
-require_once __DIR__ . '/../app/routes.php';
+require_once $app['root_dir'] . '/services.php';
+require_once $app['root_dir'] . '/controllers.php';
+require_once $app['root_dir'] . '/routes.php';
+
+$app->configure($app['root_dir'] . '/config/config.yml');
 
 return $app;

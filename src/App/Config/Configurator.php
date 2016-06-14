@@ -8,7 +8,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 class Configurator
 {
     /**
-     * @var LoaderInterface
+     * @var \Symfony\Component\Config\Loader\LoaderInterface
      */
     protected $loader;
 

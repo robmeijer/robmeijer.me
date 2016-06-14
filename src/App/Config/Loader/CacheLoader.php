@@ -42,22 +42,21 @@ class CacheLoader extends Loader
      */
     public function load($resource, $type = null)
     {
-        $parameters = [];
         $file = $this->cacheDir . '/' . crc32($resource) . '.php';
         $cache = new ConfigCache($file, $this->debug);
 
         if (! $cache->isFresh()) {
             $parameters = $this->loader->load($resource);
-        }
 
-        if ($this->cacheDir && isset($parameters)) {
             $cache->write(
                 '<?php return ' . var_export($parameters, true) . ';',
                 $this->resourceCollection->all()
             );
+
+            return $parameters;
         }
 
-        return $parameters ?: require $cache->getPath();
+        return require $cache->getPath();
     }
 
     /**

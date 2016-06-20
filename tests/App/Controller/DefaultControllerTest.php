@@ -25,8 +25,8 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
         $response = $defaultController->render(
             'default.html.twig',
             [
-                'positions' => $defaultController->getEmploymentRepo()->all(),
-                'skills' => $defaultController->getSkillsRepo()->all(),
+                'positions' => $defaultController->getEmploymentRepo()->get(),
+                'skills' => $defaultController->getSkillsRepo()->get(),
             ]);
 
         $this->assertInstanceOf(Response::class, $response);

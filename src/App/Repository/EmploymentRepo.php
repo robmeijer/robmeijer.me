@@ -2,8 +2,18 @@
 
 namespace App\Repository;
 
-class EmploymentRepo
+use App\Employment\Position;
+use App\Repository\Contracts\Repo;
+use DateInterval;
+use DatePeriod;
+use DateTime;
+use Illuminate\Support\Collection;
+
+class EmploymentRepo implements Repo
 {
+    /**
+     * @var array
+     */
     protected $positions = [
         [
             'title' => 'Support / Development Team Leader',
@@ -21,7 +31,9 @@ class EmploymentRepo
                 'Introduced a number of automations that made the Contact Centre less reliant on IT and more
                 self-sufficient',
             ],
-            'skills' => 'Atlassian Suite (Jira, Bitbucket, Bamboo, Confluence), Agile, Scrum',
+            'skills' => [
+                'Atlassian Suite (Jira, Bitbucket, Bamboo, Confluence)', 'Agile', 'Scrum',
+            ],
         ],
         [
             'title' => 'Senior Developer',
@@ -36,8 +48,10 @@ class EmploymentRepo
                 'Spearheaded an overhaul of PHPUnit test suite to separate tests out into unit, functional, and
                 integration tests',
             ],
-            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows, OOP, MVC, Zend1, Zend2, Zend Expressive, PHPUnit,
-                Silex, JQuery, Bootstrap CSS, Redis, REST, Git, Composer',
+            'skills' => [
+                'LAMP', 'HTML+CSS+JS', 'AJAX', 'Linux+Windows', 'OOP', 'MVC', 'Zend1', 'Zend2', 'Zend Expressive',
+                'PHPUnit', 'Silex', 'JQuery', 'Bootstrap CSS', 'Redis', 'REST', 'Git', 'Composer',
+            ],
         ],
         [
             'title' => 'Support Team Leader',
@@ -53,6 +67,7 @@ class EmploymentRepo
                 'Reduced overall number of open support tickets by 65% within 6 months. 85% of tickets opened are closed
                 within the same week, and all critical tickets are closed within a few hours at most'
             ],
+            'skills' => [],
         ],
         [
             'title' => 'Senior Developer',
@@ -74,8 +89,10 @@ class EmploymentRepo
                 'Implemented Markdown driven centralised documentation system to allow IT and business to document
                 common processes. This was eventually migrated to Evernote',
             ],
-            'skills' => 'LAMP, HTML+CSS+JS, AJAX, Linux+Windows+OS X, OOP, MVC, Symfony2, JQuery, Bootstrap CSS, Redis,
-            Beanstalkd, REST, Git, SVN, Composer',
+            'skills' => [
+                'LAMP', 'HTML+CSS+JS', 'AJAX', 'Linux+Windows+OS X', 'OOP', 'MVC', 'Symfony2', 'JQuery',
+                'Bootstrap CSS', 'Redis', 'Beanstalkd', 'REST', 'Git', 'SVN', 'Composer',
+            ],
         ],
         [
             'title' => 'Web Developer',
@@ -84,7 +101,8 @@ class EmploymentRepo
             'details' => [
                 'Development and maintenance of customer sites',
             ],
-            'skills' => 'PHP, MySQL, HTML+CSS+JS, Linux+Windows, PhotoShop',
+            'achievements' => [],
+            'skills' => ['PHP', 'MySQL', 'HTML+CSS+JS', 'Linux+Windows', 'PhotoShop'],
         ],
         [
             'title' => 'Technical Consultant',
@@ -94,7 +112,8 @@ class EmploymentRepo
                 'Development and maintenance of help-desk system',
                 'Customer technical support, telephonic and on-site training, network and desktop administration',
             ],
-            'skills' => 'PHP, MySQL, HTML+CSS, Linux+Windows',
+            'achievements' => [],
+            'skills' => ['PHP', 'MySQL', 'HTML+CSS', 'Linux+Windows'],
         ],
         [
             'title' => 'Technical Consultant',
@@ -104,12 +123,45 @@ class EmploymentRepo
                 'Development and maintenance of company website',
                 'Windows desktop support & network administration',
             ],
-            'skills' => 'PHP, MySQL, HTML+CSS, Linux+Windows',
+            'achievements' => [],
+            'skills' => ['PHP', 'MySQL', 'HTML+CSS', 'Linux+Windows'],
         ],
     ];
 
-    public function all()
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function get()
     {
-        return $this->positions;
+        $allPositions = new Collection();
+        foreach ($this->positions as $position) {
+            $allPositions->push(new Position(
+                $position['title'],
+                $this->resolvePeriod($position['period']),
+                $position['company'],
+                $position['details'],
+                $position['achievements'],
+                $position['skills'])
+            );
+        }
+
+        return $allPositions;
+    }
+
+    /**
+     * @param string $period
+     * @return \DatePeriod
+     */
+    protected function resolvePeriod($period)
+    {
+        $period = explode(' ', $period);
+        $start = DateTime::createFromFormat('FYhi', $period[0] . $period[1] . '1200');
+        if ($period[3] == 'Present') {
+            $end = new DateTime();
+        } else {
+            $end = new DateTime($period[3] . ' ' . $period[4] . ' 12:00');
+        }
+        $interval = new DateInterval('P1M');
+        return new DatePeriod($start, $interval, $end);
     }
 }

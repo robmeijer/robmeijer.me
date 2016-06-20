@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App;
-use App\Repository\EmploymentRepo;
+use App\Repository\Contracts\Repo;
 use App\Repository\SkillsRepo;
 
 /**
@@ -14,7 +14,7 @@ use App\Repository\SkillsRepo;
 class DefaultController extends Controller
 {
     /**
-     * @var \App\Repository\EmploymentRepo
+     * @var Repo
      */
     protected $employmentRepo;
     /**
@@ -23,13 +23,13 @@ class DefaultController extends Controller
     protected $skillsRepo;
 
     /**
-     * DefaultController constructor.
+     * DefaultController constructor
      *
      * @param App $app
-     * @param EmploymentRepo $employmentRepo
+     * @param Repo $employmentRepo
      * @param SkillsRepo $skillsRepo
      */
-    public function __construct(App $app, EmploymentRepo $employmentRepo, SkillsRepo $skillsRepo)
+    public function __construct(App $app, Repo $employmentRepo, SkillsRepo $skillsRepo)
     {
         parent::__construct($app);
         $this->employmentRepo = $employmentRepo;
@@ -44,13 +44,13 @@ class DefaultController extends Controller
         return $this->render(
             'default.html.twig',
             [
-                'positions' => $this->getEmploymentRepo()->all(),
-                'skills' => $this->getSkillsRepo()->all(),
+                'positions' => $this->getEmploymentRepo()->get(),
+                'skills' => $this->getSkillsRepo()->get(),
             ]);
     }
 
     /**
-     * @return EmploymentRepo
+     * @return Repo
      */
     public function getEmploymentRepo()
     {

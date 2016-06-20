@@ -18,6 +18,6 @@ class EmploymentRepoTest extends \PHPUnit_Framework_TestCase
      */
     public function it_can_return_an_array()
     {
-        $this->assertInternalType('array', $this->class->all());
+        $this->assertInternalType('array', (array) $this->class->get());
     }
 }

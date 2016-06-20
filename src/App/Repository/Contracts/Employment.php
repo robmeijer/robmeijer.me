@@ -2,10 +2,10 @@
 
 namespace App\Repository\Contracts;
 
-interface Repo
+interface Employment
 {
     /**
      * @return \Illuminate\Support\Collection
      */
-    public function get();
+    public function getPositions();
 }

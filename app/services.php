@@ -1,12 +1,14 @@
 <?php
 
-use App\Repository\EmploymentRepo;
-use App\Repository\SkillsRepo;
+use App\Repository\ArrayEmployment;
+use App\Repository\ArraySkills;
+use App\Repository\Contracts\Employment;
+use App\Repository\Contracts\Skills;
 
-$app[EmploymentRepo::class] = function () {
-    return new EmploymentRepo();
+$app[Employment::class] = function () {
+    return new ArrayEmployment();
 };
 
-$app[SkillsRepo::class] = function () {
-    return new SkillsRepo();
+$app[Skills::class] = function () {
+    return new ArraySkills();
 };

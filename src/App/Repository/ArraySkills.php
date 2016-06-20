@@ -2,11 +2,11 @@
 
 namespace App\Repository;
 
-use App\Repository\Contracts\Repo;
+use App\Repository\Contracts\Skills;
 use App\Skills\Skill;
 use Illuminate\Support\Collection;
 
-class SkillsRepo implements Repo
+class ArraySkills implements Skills
 {
     /**
      * @var array
@@ -68,7 +68,7 @@ class SkillsRepo implements Repo
     /**
      * @return \Illuminate\Support\Collection
      */
-    public function get()
+    public function getSkills()
     {
         $allSkills = new Collection();
         foreach ($this->skills as $skill) {

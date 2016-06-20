@@ -2,14 +2,14 @@
 
 use App\Controller\ComingController;
 use App\Controller\DefaultController;
-use App\Repository\EmploymentRepo;
-use App\Repository\SkillsRepo;
+use App\Repository\Contracts\Employment;
+use App\Repository\Contracts\Skills;
 
 $app[DefaultController::class] = function () use ($app) {
     return new DefaultController(
         $app,
-        $app[EmploymentRepo::class],
-        $app[SkillsRepo::class]
+        $app[Employment::class],
+        $app[Skills::class]
     );
 };
 

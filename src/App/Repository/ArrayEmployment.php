@@ -3,13 +3,13 @@
 namespace App\Repository;
 
 use App\Employment\Position;
-use App\Repository\Contracts\Repo;
+use App\Repository\Contracts\Employment;
 use DateInterval;
 use DatePeriod;
 use DateTime;
 use Illuminate\Support\Collection;
 
-class EmploymentRepo implements Repo
+class ArrayEmployment implements Employment
 {
     /**
      * @var array
@@ -131,7 +131,7 @@ class EmploymentRepo implements Repo
     /**
      * @return \Illuminate\Support\Collection
      */
-    public function get()
+    public function getPositions()
     {
         $allPositions = new Collection();
         foreach ($this->positions as $position) {
@@ -162,6 +162,7 @@ class EmploymentRepo implements Repo
             $end = new DateTime($period[3] . ' ' . $period[4] . ' 12:00');
         }
         $interval = new DateInterval('P1M');
+
         return new DatePeriod($start, $interval, $end);
     }
 }

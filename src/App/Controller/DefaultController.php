@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App;
-use App\Repository\Contracts\Repo;
-use App\Repository\SkillsRepo;
+use App\Repository\Contracts\Employment;
+use App\Repository\Contracts\Skills;
 
 /**
  * Class DefaultController
@@ -14,26 +14,26 @@ use App\Repository\SkillsRepo;
 class DefaultController extends Controller
 {
     /**
-     * @var Repo
+     * @var \App\Repository\Contracts\Employment
      */
-    protected $employmentRepo;
+    protected $employment;
     /**
-     * @var \App\Repository\SkillsRepo
+     * @var \App\Repository\Contracts\Skills
      */
-    protected $skillsRepo;
+    protected $skills;
 
     /**
      * DefaultController constructor
      *
      * @param App $app
-     * @param Repo $employmentRepo
-     * @param SkillsRepo $skillsRepo
+     * @param Employment $employment
+     * @param Skills $skills
      */
-    public function __construct(App $app, Repo $employmentRepo, SkillsRepo $skillsRepo)
+    public function __construct(App $app, Employment $employment, Skills $skills)
     {
         parent::__construct($app);
-        $this->employmentRepo = $employmentRepo;
-        $this->skillsRepo = $skillsRepo;
+        $this->employment = $employment;
+        $this->skills = $skills;
     }
 
     /**
@@ -44,24 +44,24 @@ class DefaultController extends Controller
         return $this->render(
             'default.html.twig',
             [
-                'positions' => $this->getEmploymentRepo()->get(),
-                'skills' => $this->getSkillsRepo()->get(),
+                'positions' => $this->getEmployment()->getPositions(),
+                'skills' => $this->getSkills()->getSkills(),
             ]);
     }
 
     /**
-     * @return Repo
+     * @return Employment
      */
-    public function getEmploymentRepo()
+    public function getEmployment()
     {
-        return $this->employmentRepo;
+        return $this->employment;
     }
 
     /**
-     * @return SkillsRepo
+     * @return Skills
      */
-    public function getSkillsRepo()
+    public function getSkills()
     {
-        return $this->skillsRepo;
+        return $this->skills;
     }
 }

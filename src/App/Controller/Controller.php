@@ -23,10 +23,7 @@ abstract class Controller
     }
 
     /**
-     * @param $view
-     * @param array $parameters
-     * @param Response|null $response
-     * @return \Symfony\Component\HttpFoundation\Response;
+     * {@inheritdoc}
      */
     public function render($view, array $parameters = [], Response $response = null)
     {

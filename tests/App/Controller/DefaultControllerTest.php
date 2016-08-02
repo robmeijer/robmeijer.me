@@ -3,8 +3,8 @@
 namespace Test\App\Controller;
 
 use App\Controller\DefaultController;
-use App\Repository\EmploymentRepo;
-use App\Repository\SkillsRepo;
+use App\Repository\Contracts\Employment;
+use App\Repository\Contracts\Skills;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultControllerTest extends \PHPUnit_Framework_TestCase
@@ -18,15 +18,15 @@ class DefaultControllerTest extends \PHPUnit_Framework_TestCase
         $app->expects($this->once())
             ->method('render')
             ->will($this->returnValue(new Response));
-        $employmentRepo = $this->createMock(EmploymentRepo::class);
-        $skillsRepo = $this->createMock(SkillsRepo::class);
+        $employment = $this->createMock(Employment::class);
+        $skills = $this->createMock(Skills::class);
 
-        $defaultController = new DefaultController($app, $employmentRepo, $skillsRepo);
+        $defaultController = new DefaultController($app, $employment, $skills);
         $response = $defaultController->render(
             'default.html.twig',
             [
-                'positions' => $defaultController->getEmploymentRepo()->all(),
-                'skills' => $defaultController->getSkillsRepo()->all(),
+                'positions' => $defaultController->getEmployment()->getPositions(),
+                'skills' => $defaultController->getSkills()->getSkills(),
             ]);
 
         $this->assertInstanceOf(Response::class, $response);

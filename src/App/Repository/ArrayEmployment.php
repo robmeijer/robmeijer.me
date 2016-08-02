@@ -16,15 +16,15 @@ class ArrayEmployment implements Employment
      */
     protected $positions = [
         [
-            'title' => 'Support / Development Team Leader',
+            'title' => 'Development Team Lead / Scrum Master',
             'period' => 'January 2016 - Present',
             'company' => 'Interactive Investor',
             'details' => [
-                'Ownership of the Trading team delivery, ensuring timely delivery of projects',
-                'Scoping projects and breaking them down into tasks and estimates',
+                'Ownership of the Trading team delivery, to ensure timely delivery of projects',
+                'Scope projects and break them down into tasks and estimates',
                 'Initial escalation point for incidents and bugs',
-                'Assisting across business projects with technical discussions',
-                'Managing the release process, ensuring progress of completed tasks through development, to UAT, and
+                'Assist across business projects with technical discussions',
+                'Manage the release process to ensure progress of completed tasks through development, to UAT, and
                 release',
             ],
             'achievements' => [
@@ -42,7 +42,7 @@ class ArrayEmployment implements Employment
             'details' => [
                 'Ongoing planning and development of Trading platform based on Zend1',
                 'Planning and development of various micro-services based on Zend2 and Zend Expressive',
-                'Performing code reviews as part of development process to ensure coding standards are maintained',
+                'Perform code reviews as part of development process to ensure coding standards are maintained',
             ],
             'achievements' => [
                 'Spearheaded an overhaul of PHPUnit test suite to separate tests out into unit, functional, and
@@ -75,9 +75,9 @@ class ArrayEmployment implements Employment
             'company' => 'WorldStores Ltd',
             'details' => [
                 'Planning and development of CMS and E-commerce platform supporting 70+ sites',
-                'Weekly workshops on various topics to improve knowledge base and coding standards',
-                'Research new technologies and best practices that will benefit the company',
-                'Regular code reviews to ensure coding standards are maintained',
+                'Hold weekly workshops on various topics to improve knowledge base and coding standards',
+                'Research and introduce new technologies and best practices that may benefit the company',
+                'Perform regular code reviews to ensure coding standards are maintained',
             ],
             'achievements' => [
                 'Developed CSV driven data import system to handle bulk creation of new records, and to import, resize,

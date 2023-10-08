@@ -1,74 +1,52 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
+use App\Repository\SkillRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\SkillRepository")
- */
+#[ORM\Entity(repositoryClass: SkillRepository::class)]
 class Skill
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     *
-     * @var int
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string")
-     *
-     * @var string
-     */
-    private $type;
+    #[ORM\Column(length: 255)]
+    private ?string $type = null;
 
-    /**
-     * @ORM\Column(type="array")
-     *
-     * @var array
-     */
-    private $keywords;
+    #[ORM\Column]
+    private array $keywords = [];
 
-    /**
-     * @return int
-     */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
 
-    /**
-     * @param string $type
-     */
-    public function setType(string $type): void
+    public function setType(string $type): static
     {
         $this->type = $type;
+
+        return $this;
     }
 
-    /**
-     * @return array
-     */
     public function getKeywords(): array
     {
         return $this->keywords;
     }
 
-    /**
-     * @param array $keywords
-     */
-    public function setKeywords(array $keywords): void
+    public function setKeywords(array $keywords): static
     {
         $this->keywords = $keywords;
+
+        return $this;
     }
 }

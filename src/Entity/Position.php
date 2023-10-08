@@ -1,166 +1,112 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
+use App\Repository\PositionRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\PositionRepository")
- */
+#[ORM\Entity(repositoryClass: PositionRepository::class)]
 class Position
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     *
-     * @var int
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Column(type="string")
-     *
-     * @var string
-     */
-    private $title;
+    #[ORM\Column(length: 255)]
+    private ?string $title = null;
 
-    /**
-     * @ORM\Column(type="string")
-     *
-     * @var string
-     */
-    private $period;
+    #[ORM\Column(length: 255)]
+    private ?string $period = null;
 
-    /**
-     * @ORM\Column(type="string")
-     *
-     * @var string
-     */
-    private $company;
+    #[ORM\Column(length: 255)]
+    private ?string $company = null;
 
-    /**
-     * @ORM\Column(type="array")
-     *
-     * @var array
-     */
-    private $details;
+    #[ORM\Column]
+    private array $details = [];
 
-    /**
-     * @ORM\Column(type="array", nullable=true)
-     *
-     * @var array
-     */
-    private $achievements;
+    #[ORM\Column(nullable: true)]
+    private ?array $achievements = null;
 
-    /**
-     * @ORM\Column(type="array", nullable=true)
-     *
-     * @var array
-     */
-    private $skills;
+    #[ORM\Column(nullable: true)]
+    private ?array $skills = null;
 
-    /**
-     * @return int
-     */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    /**
-     * @param string $title
-     */
-    public function setTitle(string $title): void
+    public function setTitle(string $title): static
     {
         $this->title = $title;
+
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPeriod(): string
+    public function getPeriod(): ?string
     {
         return $this->period;
     }
 
-    /**
-     * @param string $period
-     */
-    public function setPeriod(string $period): void
+    public function setPeriod(string $period): static
     {
         $this->period = $period;
+
+        return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getCompany(): string
+    public function getCompany(): ?string
     {
         return $this->company;
     }
 
-    /**
-     * @param string $company
-     */
-    public function setCompany(string $company): void
+    public function setCompany(string $company): static
     {
         $this->company = $company;
+
+        return $this;
     }
 
-    /**
-     * @return array
-     */
     public function getDetails(): array
     {
         return $this->details;
     }
 
-    /**
-     * @param array $details
-     */
-    public function setDetails(array $details): void
+    public function setDetails(array $details): static
     {
         $this->details = $details;
+
+        return $this;
     }
 
-    /**
-     * @return array
-     */
-    public function getAchievements(): array
+    public function getAchievements(): ?array
     {
         return $this->achievements;
     }
 
-    /**
-     * @param array $achievements
-     */
-    public function setAchievements(array $achievements): void
+    public function setAchievements(?array $achievements): static
     {
         $this->achievements = $achievements;
+
+        return $this;
     }
 
-    /**
-     * @return array
-     */
-    public function getSkills(): array
+    public function getSkills(): ?array
     {
         return $this->skills;
     }
 
-    /**
-     * @param array $skills
-     */
-    public function setSkills(array $skills): void
+    public function setSkills(?array $skills): static
     {
         $this->skills = $skills;
+
+        return $this;
     }
 }

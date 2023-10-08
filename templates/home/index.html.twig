@@ -66,7 +66,7 @@
                 <h2 class="section-title">
                     <span class="icon-holder"><i class="fa-solid fa-briefcase"></i></span>Employment History
                 </h2>
-                {% if position is defined %}{% for position in positions|reverse %}
+                {% for position in positions|reverse %}
                     <div class="item">
                         <div class="meta">
                             <div class="upper-row">
@@ -95,18 +95,18 @@
                             </div><!--//details-->
                         {% endif %}
                     </div><!--//item-->
-                {% endfor %}{% endif %}
+                {% endfor %}
             </section><!--//section-->
             <section class="section projects-section">
                 <h2 class="section-title">
                     <span class="icon-holder"><i class="fa-solid fa-rocket"></i></span>Technical Skills
                 </h2>
-                {% if position is defined %}{% for skill in skills %}
+                {% for skill in skills %}
                 <div class="item">
                     <span class="project-title">{{ skill.type|upper }}</span><br>
                     <span class="project-tagline">{{ skill.keywords|join(', ') }}</span>
                 </div><!--//item-->
-                {% endfor %}{% endif %}
+                {% endfor %}
             </section><!--//section-->
         </div><!--//main-body-->
     </div>

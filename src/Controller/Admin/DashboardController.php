@@ -20,10 +20,9 @@ class DashboardController extends AbstractDashboardController
 {
     public function __construct(
         private readonly AdminUrlGenerator $urlGenerator,
-    ) {
-    }
+    ) {}
 
-    #[Route('/admin', name: 'app_admin')]
+    #[Route('/admin', name: 'app_admin', host: 'localhost', env: 'dev')]
     public function index(): Response
     {
         return $this->redirect($this->urlGenerator->setController(PositionCrudController::class)->generateUrl());

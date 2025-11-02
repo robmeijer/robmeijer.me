@@ -25,6 +25,8 @@ CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile" ]
 
 FROM app AS local
 
+ARG LOCAL_USER_ID
+ARG LOCAL_GROUP_ID
 ARG XDEBUG_MODE
 
 ENV XDEBUG_MODE="${XDEBUG_MODE}"
@@ -36,7 +38,7 @@ RUN set -eux; \
       install-php-extensions xdebug; \
     fi; \
     ln -sf "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"; \
-    usermod -u ${USER_ID} www-data && groupmod -g ${GROUP_ID} www-data; \
+    usermod -u ${LOCAL_USER_ID} www-data && groupmod -g ${LOCAL_GROUP_ID} www-data; \
     chown -R www-data:www-data /data/caddy && chown -R www-data:www-data /config/caddy; \
     chown -R www-data:www-data /var/www;
 

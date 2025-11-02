@@ -16,4 +16,7 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
+    '@fortawesome/fontawesome-free/js/all.min' => [
+        'version' => '7.1.0',
+    ],
 ];

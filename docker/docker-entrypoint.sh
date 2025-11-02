@@ -9,6 +9,9 @@ fi
 if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
   if [ "$APP_ENV" = 'dev' ]; then
     composer install --no-cache --no-interaction --no-progress
+  else
+    bin/console sass:build
+    bin/console asset-map:compile
   fi
 fi
 

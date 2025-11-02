@@ -53,11 +53,7 @@ class DashboardController extends AbstractDashboardController
     public function configureActions(): Actions
     {
         return parent::configureActions()
-            ->update(Crud::PAGE_INDEX, Action::EDIT, static function (Action $action) {
-                return $action->setIcon('fas fa-edit');
-            })
-            ->update(Crud::PAGE_INDEX, Action::DELETE, static function (Action $action) {
-                return $action->setIcon('far fa-trash-alt')->setLabel(false);
-            });
+            ->update(Crud::PAGE_INDEX, Action::EDIT, static fn (Action $action): Action => $action->setIcon('fa-solid fa-pen-to-square'))
+            ->update(Crud::PAGE_INDEX, Action::DELETE, static fn (Action $action): Action => $action->setLabel(false));
     }
 }

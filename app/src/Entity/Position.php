@@ -14,7 +14,7 @@ class Position
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    public private(set) ?int $id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
@@ -25,19 +25,17 @@ class Position
     #[ORM\Column(length: 255)]
     private ?string $company = null;
 
+    /** @var string[] $details */
     #[ORM\Column(type: Types::JSON)]
     private array $details = [];
 
+    /** @var string[] $achievements */
     #[ORM\Column(type: Types::JSON, nullable: true)]
     private ?array $achievements = null;
 
+    /** @var string[] $skills */
     #[ORM\Column(type: Types::JSON, nullable: true)]
     private ?array $skills = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getTitle(): ?string
     {
@@ -75,11 +73,13 @@ class Position
         return $this;
     }
 
+    /** @return string[] */
     public function getDetails(): array
     {
         return $this->details;
     }
 
+    /** @param string[] $details */
     public function setDetails(array $details): static
     {
         $this->details = $details;
@@ -87,11 +87,13 @@ class Position
         return $this;
     }
 
+    /** @return string[]|null */
     public function getAchievements(): ?array
     {
         return $this->achievements;
     }
 
+    /** @param string[] $achievements */
     public function setAchievements(?array $achievements): static
     {
         $this->achievements = $achievements;
@@ -99,11 +101,13 @@ class Position
         return $this;
     }
 
+    /** @return string[]|null */
     public function getSkills(): ?array
     {
         return $this->skills;
     }
 
+    /** @param string[] $skills */
     public function setSkills(?array $skills): static
     {
         $this->skills = $skills;

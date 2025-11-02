@@ -14,18 +14,14 @@ class Skill
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    public private(set) ?int $id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $type = null;
 
+    /** @var string[] $keywords */
     #[ORM\Column(type: Types::JSON)]
     private array $keywords = [];
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getType(): ?string
     {
@@ -39,11 +35,13 @@ class Skill
         return $this;
     }
 
+    /** @return string[] */
     public function getKeywords(): array
     {
         return $this->keywords;
     }
 
+    /** @param string[] $keywords */
     public function setKeywords(array $keywords): static
     {
         $this->keywords = $keywords;

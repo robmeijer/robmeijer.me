@@ -5,6 +5,7 @@
 !/app/assets/
 !/app/bin/
 !/app/config/
+!/app/data/
 !/app/migrations/
 !/app/public/
 !/app/src/

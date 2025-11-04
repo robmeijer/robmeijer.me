@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23f7295c42f9972cf852bce6c56c5eb1",
+    "content-hash": "335ed6b8d5168f163fc5d2dd76905f3b",
     "packages": [
         {
             "name": "composer/semver",
@@ -1207,20 +1207,20 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.26.5",
+            "version": "v4.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "330c2b85d8f8e840c01e873c818c4ab87a6b8684"
+                "reference": "7a21fad4c44434b98794bd2304dcc6380a01d6df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/330c2b85d8f8e840c01e873c818c4ab87a6b8684",
-                "reference": "330c2b85d8f8e840c01e873c818c4ab87a6b8684",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/7a21fad4c44434b98794bd2304dcc6380a01d6df",
+                "reference": "7a21fad4c44434b98794bd2304dcc6380a01d6df",
                 "shasum": ""
             },
             "require": {
-                "doctrine/doctrine-bundle": "^2.5",
+                "doctrine/doctrine-bundle": "^2.5|^3.0",
                 "doctrine/orm": "^2.12|^3.0",
                 "ext-json": "*",
                 "php": ">=8.1",
@@ -1251,13 +1251,13 @@
                 "twig/twig": "^3.20"
             },
             "require-dev": {
-                "doctrine/doctrine-fixtures-bundle": "^3.4|3.5.x-dev",
+                "doctrine/doctrine-fixtures-bundle": "^3.4|3.5.x-dev|^4.0",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2.0",
                 "phpstan/phpstan-phpunit": "^2.0",
                 "phpstan/phpstan-strict-rules": "^2.0",
                 "phpstan/phpstan-symfony": "^2.0",
-                "psr/log": "^1.0",
+                "psr/log": "^1.0|^2.0|^3.0",
                 "symfony/browser-kit": "^5.4|^6.0|^7.0",
                 "symfony/css-selector": "^5.4|^6.0|^7.0",
                 "symfony/debug-bundle": "^5.4|^6.0|^7.0",
@@ -1298,7 +1298,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.26.5"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.27.0"
             },
             "funding": [
                 {
@@ -1306,7 +1306,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-19T11:16:17+00:00"
+            "time": "2025-11-03T19:41:58+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7715,12 +7715,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "d2e1583e5f89f53f7882861c1639c14c9a154585"
+                "reference": "19966d2f97bbc444bb176432754e33256a7d45bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/d2e1583e5f89f53f7882861c1639c14c9a154585",
-                "reference": "d2e1583e5f89f53f7882861c1639c14c9a154585",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/19966d2f97bbc444bb176432754e33256a7d45bf",
+                "reference": "19966d2f97bbc444bb176432754e33256a7d45bf",
                 "shasum": ""
             },
             "conflict": {
@@ -8155,7 +8155,7 @@
                 "maikuolan/phpmussel": ">=1,<1.6",
                 "mainwp/mainwp": "<=4.4.3.3",
                 "manogi/nova-tiptap": "<=3.2.6",
-                "mantisbt/mantisbt": "<=2.26.3",
+                "mantisbt/mantisbt": "<2.27.2",
                 "marcwillmann/turn": "<0.3.3",
                 "marshmallow/nova-tiptap": "<5.7",
                 "matomo/matomo": "<1.11",
@@ -8243,7 +8243,7 @@
                 "open-web-analytics/open-web-analytics": "<1.8.1",
                 "opencart/opencart": ">=0",
                 "openid/php-openid": "<2.3",
-                "openmage/magento-lts": "<20.12.3",
+                "openmage/magento-lts": "<20.16",
                 "opensolutions/vimbadmin": "<=3.0.15",
                 "opensource-workshop/connect-cms": "<1.8.7|>=2,<2.4.7",
                 "orchid/platform": ">=8,<14.43",
@@ -8698,7 +8698,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-30T18:07:16+00:00"
+            "time": "2025-11-03T21:05:38+00:00"
         },
         {
             "name": "symfony/debug-bundle",

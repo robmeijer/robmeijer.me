@@ -1112,7 +1112,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *             repository_factory?: scalar|null, // Default: "doctrine.orm.container_repository_factory"
  *             schema_ignore_classes?: list<scalar|null>,
  *             report_fields_where_declared?: bool, // Set to "true" to opt-in to the new mapping driver mode that was added in Doctrine ORM 2.16 and will be mandatory in ORM 3.0. See https://github.com/doctrine/orm/pull/10455. // Default: true
- *             validate_xml_mapping?: bool, // Set to "true" to opt-in to the new mapping driver mode that was added in Doctrine ORM 2.14 and will be mandatory in ORM 3.0. See https://github.com/doctrine/orm/pull/6728. // Default: false
+ *             validate_xml_mapping?: bool, // Set to "true" to opt-in to the new mapping driver mode that was added in Doctrine ORM 2.14. See https://github.com/doctrine/orm/pull/6728. // Default: false
  *             second_level_cache?: array{
  *                 region_cache_driver?: string|array{
  *                     type?: scalar|null, // Default: null

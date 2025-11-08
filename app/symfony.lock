@@ -141,9 +141,10 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "7.4",
-            "ref": "d48a3b91831a0f7c4278cd9088f0a7c39c1d0a1d"
+            "ref": "02a78fc0b847dce890992e0d845838bd15e8e2e8"
         },
         "files": [
+            ".editorconfig",
             "config/packages/cache.yaml",
             "config/packages/framework.yaml",
             "config/preload.php",
@@ -151,8 +152,7 @@
             "config/services.yaml",
             "public/index.php",
             "src/Controller/.gitignore",
-            "src/Kernel.php",
-            ".editorconfig"
+            "src/Kernel.php"
         ]
     },
     "symfony/maker-bundle": {
@@ -170,7 +170,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "3.7",
-            "ref": "aff23899c4440dd995907613c1dd709b6f59503f"
+            "ref": "f5f5f3e4c23f5349796b7de587f19c51e7104299"
         },
         "files": [
             "config/packages/monolog.yaml"
@@ -194,7 +194,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "7.4",
-            "ref": "eea306491b6e4872accd20caa9a428b1e468f082"
+            "ref": "11b4a52c3e254026523a4a3c46f2230183deab38"
         },
         "files": [
             "config/packages/routing.yaml",
@@ -206,8 +206,8 @@
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "6.4",
-            "ref": "2ae08430db28c8eb4476605894296c82a642028f"
+            "version": "7.4",
+            "ref": "6b33e48a479130238f33cb227d35725d3e077352"
         },
         "files": [
             "config/packages/security.yaml",
@@ -287,7 +287,17 @@
         ]
     },
     "symfonycasts/sass-bundle": {
-        "version": "v0.8.3"
+        "version": "0.8",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "0.5",
+            "ref": "c891eb9a33f522440ec7dfc0dae3f63ce3a9ee87"
+        },
+        "files": [
+            "config/packages/symfonycasts_sass.yaml",
+            "assets/styles/app.scss"
+        ]
     },
     "twig/extra-bundle": {
         "version": "v3.22.0"

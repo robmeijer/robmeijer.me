@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcc8f86034ec25a17a6da8a318f37d7f",
+    "content-hash": "0cfc34361b6eaabcd6feef64edc8baa0",
     "packages": [
         {
             "name": "composer/semver",
@@ -1207,16 +1207,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.27.2",
+            "version": "v4.27.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "e1d9a1ab143b694a42774f0112eabe8951ad56d7"
+                "reference": "426009fe298db8237885ffc316dcde21735b7038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/e1d9a1ab143b694a42774f0112eabe8951ad56d7",
-                "reference": "e1d9a1ab143b694a42774f0112eabe8951ad56d7",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/426009fe298db8237885ffc316dcde21735b7038",
+                "reference": "426009fe298db8237885ffc316dcde21735b7038",
                 "shasum": ""
             },
             "require": {
@@ -1298,7 +1298,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.27.2"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.27.3"
             },
             "funding": [
                 {
@@ -1306,7 +1306,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-11T15:11:31+00:00"
+            "time": "2025-11-13T18:58:30+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7723,12 +7723,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "ccc4996aff4ff810b514472932f677753ee5d8a4"
+                "reference": "6c7e6e7ebf679f9228c82ec3f7a432b4e8df538e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ccc4996aff4ff810b514472932f677753ee5d8a4",
-                "reference": "ccc4996aff4ff810b514472932f677753ee5d8a4",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6c7e6e7ebf679f9228c82ec3f7a432b4e8df538e",
+                "reference": "6c7e6e7ebf679f9228c82ec3f7a432b4e8df538e",
                 "shasum": ""
             },
             "conflict": {
@@ -7844,6 +7844,7 @@
                 "codeigniter4/shield": "<1.0.0.0-beta8",
                 "codiad/codiad": "<=2.8.4",
                 "codingms/additional-tca": ">=1.7,<1.15.17|>=1.16,<1.16.9",
+                "codingms/modules": "<4.3.11|>=5,<5.7.4|>=6,<6.4.2|>=7,<7.5.5",
                 "commerceteam/commerce": ">=0.9.6,<0.9.9",
                 "components/jquery": ">=1.0.3,<3.5",
                 "composer/composer": "<1.10.27|>=2,<2.2.24|>=2.3,<2.7.7",
@@ -8332,7 +8333,7 @@
                 "prestashop/ps_emailsubscription": "<2.6.1",
                 "prestashop/ps_facetedsearch": "<3.4.1",
                 "prestashop/ps_linklist": "<3.1",
-                "privatebin/privatebin": "<1.4|>=1.5,<1.7.4|>=1.7.7,<2.0.2",
+                "privatebin/privatebin": "<1.4|>=1.5,<1.7.4|>=1.7.7,<2.0.3",
                 "processwire/processwire": "<=3.0.246",
                 "propel/propel": ">=2.0.0.0-alpha1,<=2.0.0.0-alpha7",
                 "propel/propel1": ">=1,<=1.7.1",
@@ -8376,7 +8377,7 @@
                 "setasign/fpdi": "<2.6.4",
                 "sfroemken/url_redirect": "<=1.2.1",
                 "sheng/yiicms": "<1.2.1",
-                "shopware/core": "<6.6.10.7-dev|>=6.7,<6.7.3.1-dev",
+                "shopware/core": "<6.6.10.9-dev|>=6.7,<6.7.4.1-dev",
                 "shopware/platform": "<6.6.10.7-dev|>=6.7,<6.7.3.1-dev",
                 "shopware/production": "<=6.3.5.2",
                 "shopware/shopware": "<=5.7.17|>=6.7,<6.7.2.1-dev",
@@ -8706,7 +8707,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-12T14:06:11+00:00"
+            "time": "2025-11-14T21:05:13+00:00"
         },
         {
             "name": "symfony/debug-bundle",

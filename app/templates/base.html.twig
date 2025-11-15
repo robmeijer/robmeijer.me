@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Robmeijer.me - {% block title 'Welcome' %}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://robmeijer.me/favicon.ico">
+    <title>robmeijer.me - {% block title 'Welcome' %}</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ absolute_url('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ absolute_url('favicon-16x16.png') }}">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic">
     {% block stylesheets %}

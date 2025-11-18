@@ -4,7 +4,7 @@ FROM ghcr.io/robmeijer/php:8.4-frankenphp AS app
 ARG USER_ID=33
 ARG GROUP_ID=33
 
-ENV APP_ENV="prod" XDEBUG_MODE="off" FRANKENPHP_CONFIG="import worker.Caddyfile"
+ENV APP_ENV="prod" XDEBUG_MODE="off" FRANKENPHP_CONFIG="import symfony-74-worker.Caddyfile"
 
 COPY --link --chown=${USER_ID}:${GROUP_ID} app/composer.* app/symfony.lock ./
 

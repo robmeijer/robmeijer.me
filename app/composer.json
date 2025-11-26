@@ -4,7 +4,7 @@
     "minimum-stability": "beta",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.4",
+        "php": ">=8.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/dbal": "^3.10.3",
@@ -36,7 +36,7 @@
         "rector/rector": "^2.2.8",
         "roave/security-advisories": "dev-latest",
         "symfony/debug-bundle": "7.4.*",
-        "symfony/maker-bundle": "^1.64",
+        "symfony/maker-bundle": "^1.65",
         "symfony/stopwatch": "7.4.*",
         "symfony/web-profiler-bundle": "7.4.*"
     },

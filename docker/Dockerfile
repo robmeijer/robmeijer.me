@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ghcr.io/robmeijer/php:8.4-frankenphp AS app
+FROM ghcr.io/robmeijer/php:8.5-frankenphp AS app
 
 ARG USER_ID=33
 ARG GROUP_ID=33

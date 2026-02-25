@@ -10,7 +10,9 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-/** @extends AbstractCrudController<Skill> */
+/**
+ * @extends AbstractCrudController<Skill>
+ */
 class SkillCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string

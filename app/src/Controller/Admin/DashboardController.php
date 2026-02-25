@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-use App\Entity\Position;
-use App\Entity\Skill;
 use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
@@ -40,8 +38,8 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToUrl('Go to site', 'fa-solid fa-circle-right', '/');
         yield MenuItem::section('Menu');
-        yield MenuItem::linkToCrud('Positions', 'fa-solid fa-briefcase', Position::class);
-        yield MenuItem::linkToCrud('Skills', 'fa-solid fa-rocket', Skill::class);
+        yield MenuItem::linkTo(PositionCrudController::class, 'Positions', 'fa-solid fa-briefcase');
+        yield MenuItem::linkTo(SkillCrudController::class, 'Skills', 'fa-solid fa-rocket');
     }
 
     public function configureCrud(): Crud
